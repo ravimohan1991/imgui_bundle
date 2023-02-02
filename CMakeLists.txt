@@ -64,6 +64,13 @@ else()
     set(IMGUI_BUNDLE_WITH_GLFW OFF)
 endif()
 
+# IMGUI_BUNDLE_USE_FREETYPE : use freetype renderer?
+#------------------------------------------------------------------------------
+# In C++, Freetype support is added automatically if `find_package(Freetype)` succeeds
+#    (you can use any freetype installation: global or via a package manager)
+find_package(Freetype)
+option(IMGUI_BUNDLE_USE_FREETYPE "use freetype renderer" ${Freetype_FOUND})
+
 # IMGUI_BUNDLE_BUILD_DEMOS: Build demos
 # -------------------------------------
 # (ON by default if this is the main project)
@@ -115,6 +122,7 @@ endif()
 #add_link_options(-fsanitize=address)
 #add_compile_options(-fsanitize=undefined)
 #add_link_options(-fsanitize=undefined)
+
 
 
 #########################################################################
@@ -176,11 +184,10 @@ if (IMGUI_BUNDLE_BUILD_DOC)
 endif()
 
 ####################################################
-# Log Immvision status at the end
+# Log Immvision and freetype status at the end
 ####################################################
-if (IMGUI_BUNDLE_WITH_IMMVISION)
-    message(STATUS "  IMGUI_BUNDLE_WITH_IMMVISION: ON")
-else()
-    message(STATUS "  IMGUI_BUNDLE_WITH_IMMVISION: OFF")
-endif()
+message(STATUS "
+    IMGUI_BUNDLE_WITH_IMMVISION: ${IMGUI_BUNDLE_WITH_IMMVISION}
+    IMGUI_BUNDLE_USE_FREETYPE: ${IMGUI_BUNDLE_USE_FREETYPE}
+")
 

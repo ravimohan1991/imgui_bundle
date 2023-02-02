@@ -6,6 +6,7 @@
 #include "imgui_tex_inspect/imgui_tex_inspect.h"
 #include "imgui_tex_inspect/backends/tex_inspect_opengl.h"
 #include "hello_imgui/hello_imgui.h"
+#include "immapp/font_renderer.h"
 #ifdef IMGUI_BUNDLE_WITH_IMMVISION
 #include "immvision/immvision.h"
 #endif
@@ -94,6 +95,10 @@ namespace ImmApp
                 runnerParams.callbacks.BeforeExit = newBeforeExit;
             }
         }
+
+        runnerParams.callbacks.PreNewFrame = HelloImGui::AppendCallback(
+            runnerParams.callbacks.PreNewFrame,
+            ImmApp::Details::Cb_FrontRendererPreNewFrame);
 
         HelloImGui::Run(runnerParams);
 

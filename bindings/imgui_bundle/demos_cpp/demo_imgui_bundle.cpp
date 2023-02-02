@@ -2,6 +2,7 @@
 #include "immapp/immapp.h"
 #include "hello_imgui/hello_imgui.h"
 #include "immapp/snippets.h"
+#include "immapp/font_renderer.h"
 #include "demo_utils/api_demos.h"
 #include "imgui_md_wrapper/imgui_md_wrapper.h"
 
@@ -124,6 +125,7 @@ int main(int, char **)
     };
 
     runnerParams.callbacks.ShowGui = showGui;
+    runnerParams.callbacks.ShowMenus = ImmApp::ShowFontRendererMenu;
 
     // ################################################################################################
     // Part 3: Run the app

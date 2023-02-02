@@ -15,12 +15,22 @@ function(lg_disable_warning_exception_in_destructor target)
 endfunction()
 
 
-
 # This will create an imgui target with the correct install, include and link options
 function(add_imgui imgui_dir)
     if(NOT TARGET imgui)
         file(GLOB imgui_sources ${imgui_dir}/*.h ${imgui_dir}/*.cpp ${imgui_dir}/misc/cpp/*.cpp ${imgui_dir}/misc/cpp/*.h)
+        if (IMGUI_BUNDLE_USE_FREETYPE)
+            set(imgui_sources ${imgui_sources} ${imgui_dir}/misc/freetype/imgui_freetype.cpp ${imgui_dir}/misc/freetype/imgui_freetype.h)
+        endif()
+
         add_library(imgui STATIC ${imgui_sources})
+
+        if (IMGUI_BUNDLE_USE_FREETYPE)
+            find_package(Freetype REQUIRED)
+            target_link_libraries(imgui PUBLIC Freetype::Freetype)
+            target_compile_definitions(imgui PUBLIC IMGUI_ENABLE_FREETYPE IMGUI_ENABLE_STB_TRUETYPE)
+        endif()
+
         target_include_directories(imgui PUBLIC ${imgui_dir} ${imgui_dir}/..)
         target_compile_definitions(imgui PUBLIC IMGUI_USER_CONFIG="${_THIS_MODULE_DIR}/imgui_bundle_config.h")
         lg_disable_warning_exception_in_destructor(imgui)
