@@ -138,6 +138,15 @@ def lib_immvision() -> ExternalLibrary:
     )
 
 
+def lib_imnodes() -> ExternalLibrary:
+    return ExternalLibrary(
+        name="imnodes",
+        official_git_url="https://github.com/rokups/ImNodes.git",
+        official_branch="master",
+        fork_git_url="https://github.com/pthom/ImNodes.git",
+    )
+
+
 def lib_cvnp() -> ExternalLibrary:
     return ExternalLibrary(
         name="cvnp",
@@ -201,6 +210,7 @@ ALL_LIBS = [
     lib_imguizmo(),
     lib_immapp(),
     lib_immvision(),
+    lib_imnodes(),
     lib_cvnp(),
     lib_implot(),
     lib_imspinner(),

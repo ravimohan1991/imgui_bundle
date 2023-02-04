@@ -96,6 +96,13 @@ def update_libs():
     # lib.run_add_remotes().run()
     # lib.run_update_official().run()
 
+    # ImNodes
+    # ---------
+    # lib = lib_imnodes()
+    # lib.run_rm_remotes().run()
+    # lib.run_add_remotes().run()
+    # lib.run_rebase_fork_on_official_changes()
+
     # cvnp (sub library used by immvision)
     # ---------
     # lib = lib_cvnp()

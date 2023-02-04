@@ -73,3 +73,7 @@
 	path = external/imgui-command-palette/imgui-command-palette
 	url = https://github.com/pthom/imgui-command-palette.git
 	branch = imgui_bundle
+[submodule "external/ImNodes/ImNodes"]
+	path = external/ImNodes/ImNodes
+	url = https://github.com/pthom/ImNodes.git
+	branch = imgui_bundle
