@@ -18,14 +18,18 @@ if (IMGUI_BUNDLE_WITH_IMMVISION)
     hello_imgui_msvc_target_group_sources(immvision)
     target_compile_definitions(imgui_bundle PUBLIC IMGUI_BUNDLE_WITH_IMMVISION)
 endif()
+
 # Build ImNodes
 add_simple_external_library(imnodes ImNodes)
-target_sources(imnodes PRIVATE
-    ImNodes/ImNodes/ImNodes.cpp
-    ImNodes/ImNodes/ImNodes.h
-    ImNodes/ImNodes/ImNodesEz.cpp
-    ImNodes/ImNodes/ImNodesEz.h
-    )
+file(GLOB imnode_sources ImNodes/ImNodes/*.cpp ImNodes/ImNodes/*.h)
+file(GLOB imnode_cpp_sources ImNodes/ImNodes/cpp/*.cpp ImNodes/ImNodes/cpp/*.h)
+target_sources(imnodes PRIVATE ${imnode_sources} ${imnode_cpp_sources})
+if (IMGUI_BUNDLE_BUILD_PYTHON)
+    target_link_libraries(imnodes PUBLIC pybind11::pybind11)
+    target_compile_definitions(imnodes PUBLIC IMNODES_PYBIND)
+endif()
+
+
 # Build immapp (Immediate App lib, internal to ImGui Bundle)
 add_subdirectory(immapp/immapp)
 # Build implot

@@ -2,6 +2,8 @@
 // Acknowledgments
 // Node graph implementation for Dear ImGui, using https://github.com/rokups/ImNodes
 
+// Using StdLib API (adapted API for python bindings)
+
 //
 // Copyright (c) 2017-2019 Rokas Kupstys.
 //
@@ -30,35 +32,12 @@
 #include <vector>
 #include <map>
 #include <string>
+#include <functional>
+#include <memory>
 #include <imgui.h>
 #include <imgui_internal.h>
-#include "ImNodes/ImNodesEz.h"
+#include "ImNodes/cpp/ImNodesEzStdLib.h"
 
-/// A structure defining a connection between two slots of two nodes.
-struct Connection
-{
-    /// `id` that was passed to BeginNode() of input node.
-    void* InputNode = nullptr;
-    /// Descriptor of input slot.
-    const char* InputSlot = nullptr;
-    /// `id` that was passed to BeginNode() of output node.
-    void* OutputNode = nullptr;
-    /// Descriptor of output slot.
-    const char* OutputSlot = nullptr;
-
-    bool operator==(const Connection& other) const
-    {
-        return InputNode == other.InputNode &&
-               InputSlot == other.InputSlot &&
-               OutputNode == other.OutputNode &&
-               OutputSlot == other.OutputSlot;
-    }
-
-    bool operator!=(const Connection& other) const
-    {
-        return !operator ==(other);
-    }
-};
 
 enum NodeSlotTypes
 {
@@ -67,33 +46,25 @@ enum NodeSlotTypes
     NodeSlotMatrix,
 };
 
+
 /// A structure holding node state.
 struct MyNode
 {
     /// Title which will be displayed at the center-top of the node.
-    const char* Title = nullptr;
+    std::string Title = "";
     /// Flag indicating that node is selected by the user.
-    bool Selected = false;
+    ImNodes::BoolWrapper Selected = {false};
     /// Node position on the canvas.
     ImVec2 Pos{};
     /// List of node connections.
-    std::vector<Connection> Connections{};
+    std::vector<ImNodes::ConnectionInfo> Connections{};
     /// A list of input slots current node has.
     std::vector<ImNodes::Ez::SlotInfo> InputSlots{};
     /// A list of output slots current node has.
     std::vector<ImNodes::Ez::SlotInfo> OutputSlots{};
 
-    explicit MyNode(const char* title,
-                    const std::vector<ImNodes::Ez::SlotInfo>&& input_slots,
-                    const std::vector<ImNodes::Ez::SlotInfo>&& output_slots)
-    {
-        Title = title;
-        InputSlots = input_slots;
-        OutputSlots = output_slots;
-    }
-
     /// Deletes connection from this node.
-    void DeleteConnection(const Connection& connection)
+    void DeleteConnection(const ImNodes::ConnectionInfo& connection)
     {
         for (auto it = Connections.begin(); it != Connections.end(); ++it)
         {
@@ -106,93 +77,121 @@ struct MyNode
     }
 };
 
-std::map<std::string, MyNode*(*)()> available_nodes{
-    {"Compose", []() -> MyNode* { return new MyNode("Compose", {
-        {"Position", NodeSlotPosition}, {"Rotation", NodeSlotRotation}  // Input slots
-    }, {
-        {"Matrix", NodeSlotMatrix}                                      // Output slots
-    }); }},
-    {"Decompose", []() -> MyNode* { return new MyNode("Decompose", {
-        {"Matrix", NodeSlotMatrix}                                      // Input slots
-    }, {
-        {"Position", NodeSlotPosition}, {"Rotation", NodeSlotRotation}  // Output slots
-    }); }},
-};
-std::vector<MyNode*> nodes;
 
+using MyNodePtr = std::shared_ptr<MyNode>;
+using NodeFactoryFunction = std::function<MyNodePtr()>;
 
-void demo_imnodes_raw_api()
+MyNodePtr factorComposeNode()
 {
+    auto r = std::make_shared<MyNode>();
+    r->Title = "Compose";
+    r->InputSlots = {{"Position", NodeSlotPosition}, {"Rotation", NodeSlotRotation}};
+    r->OutputSlots = {{"Matrix", NodeSlotMatrix}};
+    return r;
+};
+
+MyNodePtr factorDecomposeNode()
+{
+    auto r = std::make_shared<MyNode>();
+    r->Title = "Decompose";
+    r->InputSlots = {{"Matrix", NodeSlotMatrix}};
+    r->OutputSlots = {{"Position", NodeSlotPosition}, {"Rotation", NodeSlotRotation}};
+    return r;
+};
+
+
+
+std::map<std::string, NodeFactoryFunction> available_nodes{
+    {"Compose", factorComposeNode},
+    {"Decompose", factorDecomposeNode}
+};
+
+
+std::vector<MyNodePtr> nodes;
+
+#define BLAH
+
+void demo_imnodes_stdlib_api()
+{
+#ifdef BLAH
     // Canvas must be created after ImGui initializes, because constructor accesses ImGui style to configure default colors.
-    static ImNodes::Ez::Context* context = ImNodes::Ez::CreateContext();
-    IM_UNUSED(context);
+    static auto contextAddress = ImNodes::Ez::CreateContextWrapper();
+    IM_UNUSED(contextAddress);
 
     // We probably need to keep some state, like positions of nodes/slots for rendering connections.
     ImNodes::Ez::BeginCanvas();
     for (auto it = nodes.begin(); it != nodes.end();)
     {
-        MyNode* node = *it;
+        MyNode* node = (*it).get();
 
         // Start rendering node
-        if (ImNodes::Ez::BeginNode(node, node->Title, &node->Pos, &node->Selected))
+        ImNodes::ConnectionSlot connectionSlot;
+        connectionSlot.Node.Value = (ImNodes::Any)&node;
+        connectionSlot.SlotTitle = node->Title;
+
+        if (ImNodes::Ez::BeginNode(connectionSlot, &node->Pos, &node->Selected))
         {
             // Render input nodes first (order is important)
             ImNodes::Ez::InputSlots(node->InputSlots.data(), node->InputSlots.size());
 
             // Custom node content may go here
-            ImGui::Text("Content of %s", node->Title);
+            ImGui::Text("Content of %s", node->Title.c_str());
 
             // Render output nodes first (order is important)
             ImNodes::Ez::OutputSlots(node->OutputSlots.data(), node->OutputSlots.size());
 
             // Store new connections when they are created
-            Connection new_connection;
-            if (ImNodes::GetNewConnection(&new_connection.InputNode, &new_connection.InputSlot,
-                                          &new_connection.OutputNode, &new_connection.OutputSlot))
+            auto newConnection = ImNodes::GetNewConnection();
+            if (newConnection.has_value())
             {
-                ((MyNode*) new_connection.InputNode)->Connections.push_back(new_connection);
-                ((MyNode*) new_connection.OutputNode)->Connections.push_back(new_connection);
+                auto inputNode = ((MyNode*)newConnection->InputNode.Node.Value);
+                auto outputNode = ((MyNode*)newConnection->OutputNode.Node.Value);
+                inputNode->Connections.push_back(*newConnection);
+                outputNode->Connections.push_back(*newConnection);
             }
 
             // Render output connections of this node
-            for (const Connection& connection : node->Connections)
+            for (const ImNodes::ConnectionInfo& connection : node->Connections)
             {
                 // Node contains all it's connections (both from output and to input slots). This means that multiple
                 // nodes will have same connection. We render only output connections and ensure that each connection
                 // will be rendered once.
-                if (connection.OutputNode != node)
+                if (connection.OutputNode.Node.Value == (ImNodes::Any)node)
                     continue;
 
-                if (!ImNodes::Connection(connection.InputNode, connection.InputSlot, connection.OutputNode,
-                                         connection.OutputSlot))
+                if (!ImNodes::Connection(connection))
                 {
                     // Remove deleted connections
-                    ((MyNode*) connection.InputNode)->DeleteConnection(connection);
-                    ((MyNode*) connection.OutputNode)->DeleteConnection(connection);
+                    auto inputNode = ((MyNode*)connection.InputNode.Node.Value);
+                    auto outputNode = ((MyNode*)connection.OutputNode.Node.Value);
+                    inputNode->DeleteConnection(connection);
+                    outputNode->DeleteConnection(connection);
                 }
             }
         }
         // Node rendering is done. This call will render node background based on size of content inside node.
         ImNodes::Ez::EndNode();
 
-        if (node->Selected && ImGui::IsKeyPressedMap(ImGuiKey_Delete) && ImGui::IsWindowFocused())
+        if (node->Selected.Value && ImGui::IsKeyPressedMap(ImGuiKey_Delete) && ImGui::IsWindowFocused())
         {
             // Deletion order is critical: first we delete connections to us
             for (auto& connection : node->Connections)
             {
-                if (connection.OutputNode == node)
+                if (connection.OutputNode.Node.Value == (ImNodes::Any)node)
                 {
-                    ((MyNode*) connection.InputNode)->DeleteConnection(connection);
+                    auto inputNode = ((MyNode*)connection.InputNode.Node.Value);
+                    inputNode->DeleteConnection(connection);
                 }
                 else
                 {
-                    ((MyNode*) connection.OutputNode)->DeleteConnection(connection);
+                    auto outputNode = ((MyNode*)connection.OutputNode.Node.Value);
+                    outputNode->DeleteConnection(connection);
                 }
             }
             // Then we delete our own connections, so we don't corrupt the list
             node->Connections.clear();
 
-            delete node;
+            // delete node;
             it = nodes.erase(it);
         }
         else
@@ -211,8 +210,9 @@ void demo_imnodes_raw_api()
         {
             if (ImGui::MenuItem(desc.first.c_str()))
             {
-                nodes.push_back(desc.second());
-                ImNodes::AutoPositionNode(nodes.back());
+                auto newNode = desc.second();
+                nodes.push_back(newNode);
+                ImNodes::AutoPositionNode(nodes.back().get());
             }
         }
 
@@ -226,7 +226,7 @@ void demo_imnodes_raw_api()
     }
 
     ImNodes::Ez::EndCanvas();
-
+#endif
 }
 
 
