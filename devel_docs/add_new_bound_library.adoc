@@ -1,0 +1,78 @@
+= How to add a new library with python bindings
+
+== Example with ImNodes
+
+=== Fork the repo
+* Fork https://github.com/rokups/ImNodes to https://github.com/pthom/ImNodes
+* Add a branch named `imgui_bundle` based on the master branch
+
+
+=== Create a folder for ImNodes:
+
+[source, bash]
+----
+mkdir external/ImNodes
+mkdir external/ImNodes/bindings
+----
+
+=== Add lib as a submodule
+
+WARNING: The submodule should track the branch `imgui_bundle`. It is checked out inside `external/ImNodes/ImNodes`
+
+[source, bash]
+----
+git submodule add -b imgui_bundle https://github.com/pthom/ImNodes.git external/ImNodes/ImNodes
+----
+
+
+=== Register lib:
+
+* Edit link:../external/bindings_generation/all_external_libraries.py[all_external_libraries.py] : add `lib_imnodes()` and add it to `ALL_LIBS`
+
+* Edit link:../external/bindings_generation/update_libs.py[update_libs.py] and add code for your lib
+
+In this case, we add:
+[source, python]
+----
+    # ImNodes
+    # ---------
+    lib = lib_imnodes()
+    lib.run_rm_remotes().run()
+    lib.run_add_remotes().run()
+    lib.run_rebase_fork_on_official_changes()
+----
+
+Run this code (this will create two remotes: `official` and `pthom`, for the fork).
+Now comment out this code.
+
+=== Commit
+
+Now is a good time for a first commit
+
+=== Register library in cmake
+
+Edit link:../external/CMakeLists.txt[], and add code for the library.
+
+In this example, we add:
+[source, cmake]
+----
+# Build ImNodes
+add_simple_external_library(imnodes ImNodes)
+target_sources(imnodes PRIVATE
+    ImNodes/ImNodes/ImNodes.cpp
+    ImNodes/ImNodes/ImNodes.h
+    ImNodes/ImNodes/ImNodesEz.cpp
+    ImNodes/ImNodes/ImNodesEz.h
+    )
+----
+
+Note: in this case, we cannot use `add_simple_external_library_with_sources` since we want to exclude a cpp file (`sample.cpp`)
+
+=== Create a C++ demo example
+
+Add link:../bindings/imgui_bundle/demos_cpp/demos_imnode/demo_imnodes_raw_api.cpp[] and fill it by adapting code from link:../external/ImNodes/ImNodes/sample.cpp[sample.cpp from ImNodes].
+
+Also add link:../bindings/imgui_bundle/demos_cpp/demos_imnode/CMakeLists.txt[]
+
+=== (Optional) Adapt the API in order to make it pure
+

@@ -18,6 +18,14 @@ if (IMGUI_BUNDLE_WITH_IMMVISION)
     hello_imgui_msvc_target_group_sources(immvision)
     target_compile_definitions(imgui_bundle PUBLIC IMGUI_BUNDLE_WITH_IMMVISION)
 endif()
+# Build ImNodes
+add_simple_external_library(imnodes ImNodes)
+target_sources(imnodes PRIVATE
+    ImNodes/ImNodes/ImNodes.cpp
+    ImNodes/ImNodes/ImNodes.h
+    ImNodes/ImNodes/ImNodesEz.cpp
+    ImNodes/ImNodes/ImNodesEz.h
+    )
 # Build immapp (Immediate App lib, internal to ImGui Bundle)
 add_subdirectory(immapp/immapp)
 # Build implot

@@ -94,6 +94,7 @@ add_subdirectory(sandbox)
 if (IMGUI_BUNDLE_WITH_IMMVISION)
     add_subdirectory(demos_immvision)
 endif()
+add_subdirectory(demos_imnode)
 
 add_this_folder_auto_demos()
 add_this_folder_as_demos_library()
