@@ -20,8 +20,12 @@ function (add_hello_imgui)
 
     # 2. Use glfw submodule for python bindings
     # When building python bindings, glfw is always built as a shared library (see cmake/add_glfw.cmake)
-    if (IMGUI_BUNDLE_BUILD_PYTHON)
+    if (IMGUI_BUNDLE_BUILD_PYTHON AND NOT EMSCRIPTEN)
         add_glfw_as_python_shared_library()
+    endif()
+    if (IMGUI_BUNDLE_BUILD_PYTHON AND EMSCRIPTEN)
+        set(HELLOIMGUI_USE_SDL2 ON CACHE BOOL "" FORCE)
+        set(HELLOIMGUI_USE_GLFW3 OFF CACHE BOOL "" FORCE)
     endif()
 
     # 3. Configure hello-imgui with the following options:
