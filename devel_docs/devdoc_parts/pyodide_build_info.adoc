@@ -40,6 +40,8 @@ rm -rf .pyodide-xbuildenv/
 See pyodide/packages/imgui_bundle/meta.yaml
 
 ```bash
-export PYODIDE_JOBS=1
 PYODIDE_PACKAGES="imgui_bundle" make
 ```
+
+(you can follow logs in pyodide/packages/imgui_bundle/build.log)
+
