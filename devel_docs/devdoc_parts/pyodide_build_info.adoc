@@ -53,3 +53,5 @@ PYODIDE_PACKAGES="imgui_bundle" make
 
 (you can follow logs in pyodide/packages/imgui_bundle/build.log)
 
+Example with pygame and SDL:
+https://ryanking13.github.io/pyodide-pygame-demo/examples/chimp.html
