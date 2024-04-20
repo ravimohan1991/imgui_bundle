@@ -22,7 +22,7 @@ PYODIDE_EMSCRIPTEN_VERSION=$(pyodide config get emscripten_version)
 source emsdk_env.sh
 ```
 
-==== Build the package
+==== Build the package  / Bof
 
 The option `--exports pyinit` is important in order to avoid weird errors (see https://github.com/pyodide/pyodide/issues/2711)
 
@@ -34,4 +34,12 @@ pyodide build --exports pyinit
 if needed, clean before build
 ```
 rm -rf .pyodide-xbuildenv/
+```
+
+==== Build the package in tree
+See pyodide/packages/imgui_bundle/meta.yaml
+
+```bash
+export PYODIDE_JOBS=1
+PYODIDE_PACKAGES="imgui_bundle" make
 ```
