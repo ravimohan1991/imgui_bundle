@@ -339,6 +339,7 @@ def litgen_options_imgui(
             r"^ImBitArray",
             r"::STB_",
             r"ImGuiStoragePair",
+            r"^ImFileHandle$",
         ]
     )
 

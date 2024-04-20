@@ -1683,6 +1683,11 @@ void py_init_module_imgui_main(py::module& m)
         {
             auto PlotLines_adapt_c_buffers = [](const char * label, const py::array & values, int values_offset = 0, const char * overlay_text = NULL, float scale_min = FLT_MAX, float scale_max = FLT_MAX, ImVec2 graph_size = ImVec2(0, 0), int stride = -1)
             {
+                // Check if the array is C-contiguous
+                if (!values.attr("flags").attr("c_contiguous").cast<bool>()) {
+                    throw std::runtime_error("The array must be contiguous, i.e, `a.flags.c_contiguous` must be True. Hint: use `numpy.ascontiguousarray`.");
+                }
+
                 // convert py::array to C standard buffer (const)
                 const void * values_from_pyarray = values.data();
                 py::ssize_t values_count = values.shape()[0];
@@ -1712,6 +1717,11 @@ void py_init_module_imgui_main(py::module& m)
         {
             auto PlotHistogram_adapt_c_buffers = [](const char * label, const py::array & values, int values_offset = 0, const char * overlay_text = NULL, float scale_min = FLT_MAX, float scale_max = FLT_MAX, ImVec2 graph_size = ImVec2(0, 0), int stride = -1)
             {
+                // Check if the array is C-contiguous
+                if (!values.attr("flags").attr("c_contiguous").cast<bool>()) {
+                    throw std::runtime_error("The array must be contiguous, i.e, `a.flags.c_contiguous` must be True. Hint: use `numpy.ascontiguousarray`.");
+                }
+
                 // convert py::array to C standard buffer (const)
                 const void * values_from_pyarray = values.data();
                 py::ssize_t values_count = values.shape()[0];
