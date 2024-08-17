@@ -1,0 +1,14 @@
+# Target labels
+ sdl-populate
+# Source files and their labels
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/sdl-populate
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/sdl-populate.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/CMakeFiles/sdl-populate-complete.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-build.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-configure.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-download.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-install.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-mkdir.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-patch.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-test.rule
+/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/CMakeFiles/sdl-populate-update.rule

@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B444D63564A04A19AFABDDE5 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D6C4841F7B2543538B51D4F0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				78AF22260750C1AA83E54470 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		E9D0A68674FA43289072A869 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F0DC753C25504B69AD7A3DBB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				08DDA1A142D67ABA1524C1ED /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				A918D0B33DD14F9BA9C317FD /* PBXTargetDependency */,
+				821C5C86F1844D3E84FF6AC8 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		F9A4C48AD1E44324B6F54AB0 /* sdl-populate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0DFBC281333A4A7EB24A9AA2 /* Build configuration list for PBXAggregateTarget "sdl-populate" */;
+			buildPhases = (
+				DEF4FD7B5AF040E03DA808D5 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir */,
+				D24C0930457F35C961CA633A /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download */,
+				4E1324F7AC575B9CCE8CA764 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update */,
+				C0AB7364DD062DE74C5C0BE6 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch */,
+				1169026F331B8A3D3E9964C7 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure */,
+				2DABB711FB4436D8A82ED7E5 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build */,
+				B5D1BF5A9862AB013E742B75 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install */,
+				86A303315022D227B5E235F6 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-test */,
+				8598EC57FFC5F161AB0EF03B /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-complete */,
+				D8EE09729C5C466A84930300 /* Generate CMakeFiles/sdl-populate */,
+			);
+			dependencies = (
+				079A7C2878DA4B23AC4BDAC3 /* PBXTargetDependency */,
+			);
+			name = "sdl-populate";
+			productName = "sdl-populate";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildStyle section */
+		5CD4DC5C5D4D46DEAB5E6A73 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		37F306D6CCD94950A9E2AB5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7533CC6584D145C3B3D59745 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A4C48AD1E44324B6F54AB0;
+			remoteInfo = "sdl-populate";
+		};
+		37FFDD79EC714701A1A714E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7533CC6584D145C3B3D59745 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B444D63564A04A19AFABDDE5;
+			remoteInfo = ZERO_CHECK;
+		};
+		57E0E143D11E4FD1B56D0A1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7533CC6584D145C3B3D59745 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B444D63564A04A19AFABDDE5;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6249E65852554C2A8496F712 /* /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CA1E336A46C445CBB5362B78 /* /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3D6EBB3A330C41AD919F9EBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54D1DF9369604DD98DFD52A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F30472B808444758F4B90F4 /* sdl-populate */ = {
+			isa = PBXGroup;
+			children = (
+				6F219DE2A8F9429FB789B8E0 /* CMake Rules */,
+				CA1E336A46C445CBB5362B78 /* /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeLists.txt */,
+			);
+			name = "sdl-populate";
+			sourceTree = "<group>";
+		};
+		6F219DE2A8F9429FB789B8E0 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8BBE8CB8678F4C0D9E92117B /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F88AFB74FBAE46B0B4EBF65D /* CMake Rules */,
+				6249E65852554C2A8496F712 /* /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		DA8DE5B52C2B48899B21B3A7 = {
+			isa = PBXGroup;
+			children = (
+				5F30472B808444758F4B90F4 /* sdl-populate */,
+				8BBE8CB8678F4C0D9E92117B /* ALL_BUILD */,
+				54D1DF9369604DD98DFD52A7 /* Products */,
+				3D6EBB3A330C41AD919F9EBB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F88AFB74FBAE46B0B4EBF65D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		7533CC6584D145C3B3D59745 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = C247317183E749B093846539 /* Build configuration list for PBXProject "sdl-populate" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				5CD4DC5C5D4D46DEAB5E6A73 /* Debug */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = DA8DE5B52C2B48899B21B3A7;
+			projectDirPath = .;
+			projectRoot = "";
+			targets = (
+				E9D0A68674FA43289072A869 /* ALL_BUILD */,
+				B444D63564A04A19AFABDDE5 /* ZERO_CHECK */,
+				F9A4C48AD1E44324B6F54AB0 /* sdl-populate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08DDA1A142D67ABA1524C1ED /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		0AA2E93674AEEB49D0C07664 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		1169026F331B8A3D3E9964C7 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/tmp/sdl-populate-cfgcmd.txt"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E echo_append
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-configure
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		2DABB711FB4436D8A82ED7E5 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E echo_append
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-build
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4E1324F7AC575B9CCE8CA764 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -P /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/tmp/sdl-populate-gitupdate.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		78AF22260750C1AA83E54470 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+  make -f /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		8598EC57FFC5F161AB0EF03B /* Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-complete */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-configure","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-test","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update"			);
+			name = "Generate CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-complete";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-complete"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E make_directory /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-complete
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-done
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		86A303315022D227B5E235F6 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-test */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-test";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-test"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E echo_append
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-test
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B5D1BF5A9862AB013E742B75 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-build"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-install"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E echo_append
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-install
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		C0AB7364DD062DE74C5C0BE6 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-update"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-patch"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E echo_append
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-patch
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D24C0930457F35C961CA633A /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir","/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/sdl-populate-gitinfo.txt"			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-download"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -P /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/tmp/sdl-populate-gitclone.cmake
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-download
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D8EE09729C5C466A84930300 /* Generate CMakeFiles/sdl-populate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-complete"			);
+			name = "Generate CMakeFiles/sdl-populate";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/CMakeFiles/sdl-populate"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		DEF4FD7B5AF040E03DA808D5 /* Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir";
+			outputPaths = (
+"/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/sdl-populate-mkdir"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -Dcfgdir=/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/tmp/sdl-populate-mkdirs.cmake
+  /opt/homebrew/Cellar/cmake/3.24.3/bin/cmake -E touch /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/sdl-populate-prefix/src/sdl-populate-stamp/$CONFIGURATION$EFFECTIVE_PLATFORM_NAME/sdl-populate-mkdir
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		079A7C2878DA4B23AC4BDAC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B444D63564A04A19AFABDDE5 /* ZERO_CHECK */;
+			targetProxy = 57E0E143D11E4FD1B56D0A1B /* PBXContainerItemProxy */;
+		};
+		821C5C86F1844D3E84FF6AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B444D63564A04A19AFABDDE5 /* ZERO_CHECK */;
+			targetProxy = 37FFDD79EC714701A1A714E2 /* PBXContainerItemProxy */;
+		};
+		A918D0B33DD14F9BA9C317FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A4C48AD1E44324B6F54AB0 /* sdl-populate */;
+			targetProxy = 37F306D6CCD94950A9E2AB5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20C7DE07E9EA494AAD95F0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		64FB4AAF42794C7D96EAC01B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		9598E8B6CFAE4053ACC509AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "sdl-populate";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B683D35CC2AC42FB82209E00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk;
+				SYMROOT = "/Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-subbuild/build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DFBC281333A4A7EB24A9AA2 /* Build configuration list for PBXAggregateTarget "sdl-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9598E8B6CFAE4053ACC509AE /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C247317183E749B093846539 /* Build configuration list for PBXProject "sdl-populate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B683D35CC2AC42FB82209E00 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6C4841F7B2543538B51D4F0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C7DE07E9EA494AAD95F0B9 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F0DC753C25504B69AD7A3DBB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64FB4AAF42794C7D96EAC01B /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7533CC6584D145C3B3D59745 /* Project object */;
+}
