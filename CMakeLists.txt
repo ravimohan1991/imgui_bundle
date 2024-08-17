@@ -38,6 +38,8 @@ ibd_clone_submodules_if_needed()
 include(${CMAKE_CURRENT_LIST_DIR}/external/hello_imgui/hello_imgui/hello_imgui_cmake/utils/cache_hello_imgui_paths.cmake)
 include(${HELLOIMGUI_CMAKE_PATH}/hello_imgui_build_lib.cmake)
 
+include_directories(${CMAKE_CURRENT_LIST_DIR}/external/imgui_test_engine/imgui_test_engine)
+
 
 # Backends
 # -----------------------------------------------------------------------------
@@ -73,9 +75,9 @@ include(${HELLOIMGUI_CMAKE_PATH}/hello_imgui_build_lib.cmake)
 ################################################################################
 # Platform backends:
 option(HELLOIMGUI_USE_GLFW3 "Use Glfw3 as a platform backend" OFF)
-option(HELLOIMGUI_USE_SDL2 "Use Sdl2 as a platform backend" OFF)
+option(HELLOIMGUI_USE_SDL2 "Use Sdl2 as a platform backend" ON)
 # Rendering backends
-option(HELLOIMGUI_HAS_OPENGL3 "Use OpenGL3 as a rendering backend" OFF)
+option(HELLOIMGUI_HAS_OPENGL3 "Use OpenGL3 as a rendering backend" ON)
 option(HELLOIMGUI_HAS_METAL "Use Metal as a rendering backend" OFF)
 option(HELLOIMGUI_HAS_VULKAN "Use Vulkan as a rendering backend" OFF)
 option(HELLOIMGUI_HAS_DIRECTX11 "Use DirectX11 as a rendering backend" OFF)
@@ -88,13 +90,9 @@ option(HELLOIMGUI_HAS_DIRECTX12 "Use DirectX12 as a rendering backend" OFF)
 # (OFF when building the cpp library; ON by default when using pip install.
 #  note: SKBUILD is set to on by pip install / setup.py)
 # Note: when building python bindings *and* C++, you may have to set -DPython_EXECUTABLE=/path/to/python
-if(SKBUILD)
-    set(IMGUI_BUNDLE_BUILD_PYTHON ON)
-    set(IMGUI_BUNDLE_BUILD_CPP OFF)
-else()
+
     option(IMGUI_BUNDLE_BUILD_PYTHON "build python bindings" OFF)
     set(IMGUI_BUNDLE_BUILD_CPP ON)
-endif()
 
 # For python bindings, we force the usage of Glfw+OpenGL3
 if(IMGUI_BUNDLE_BUILD_PYTHON)

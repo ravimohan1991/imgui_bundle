@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/SDL_haptic.c \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/../dynapi/SDL_dynapi.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include-config-debug/SDL2/SDL_config.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_platform.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/begin_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/close_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_assert.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_stdinc.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_log.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/SDL_syshaptic.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_haptic.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_error.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_joystick.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_guid.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_mutex.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/SDL_haptic_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/../joystick/SDL_joystick_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/haptic/../joystick/../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_gamecontroller.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_rwops.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_sensor.h

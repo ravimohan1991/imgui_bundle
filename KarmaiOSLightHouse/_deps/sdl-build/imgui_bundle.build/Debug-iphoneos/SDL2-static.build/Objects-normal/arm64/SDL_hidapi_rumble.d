@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/SDL_hidapi_rumble.c \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../dynapi/SDL_dynapi.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include-config-debug/SDL2/SDL_config.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_platform.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/begin_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/close_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_assert.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_stdinc.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_log.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_thread.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_error.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_atomic.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_mutex.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_timer.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/SDL_hidapijoystick_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_hints.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_joystick.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_guid.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_gamecontroller.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_rwops.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_sensor.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_hidapi.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../usb_ids.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/SDL_hidapi_rumble.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/SDL_systhread.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/SDL_thread_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/pthread/SDL_systhread_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/pthread/../../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../../thread/../SDL_error_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/hidapi/../.././SDL_internal.h

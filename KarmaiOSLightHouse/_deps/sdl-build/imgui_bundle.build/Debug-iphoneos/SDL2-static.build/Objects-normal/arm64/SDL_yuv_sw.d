@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/SDL_yuv_sw.c \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/../dynapi/SDL_dynapi.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include-config-debug/SDL2/SDL_config.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_platform.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/begin_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/close_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_assert.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_stdinc.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_log.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/SDL_yuv_sw_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_video.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_pixels.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_endian.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_rect.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_error.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_rwops.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_surface.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_blendmode.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/../video/SDL_yuv_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/render/../video/../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_cpuinfo.h

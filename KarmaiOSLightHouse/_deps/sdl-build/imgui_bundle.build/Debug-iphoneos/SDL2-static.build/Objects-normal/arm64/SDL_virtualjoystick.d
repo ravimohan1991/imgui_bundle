@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/SDL_virtualjoystick.c \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/../../SDL_internal.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/../../dynapi/SDL_dynapi.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include-config-debug/SDL2/SDL_config.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_platform.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/begin_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/close_code.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_assert.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_stdinc.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_log.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_endian.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/SDL_virtualjoystick_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_joystick.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_error.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_guid.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_mutex.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/../SDL_sysjoystick.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-src/src/joystick/virtual/../SDL_joystick_c.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_gamecontroller.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_rwops.h \
+  /Users/cowboy/imgui_bundle/KarmaiOSLightHouse/_deps/sdl-build/include/SDL2/SDL_sensor.h
